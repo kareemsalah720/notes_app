@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/adapters.dart';
+import 'package:notes/constants.dart';
 import 'package:notes/views/notes_views.dart';
 
-void main() {
-  runApp(const NotesApp());
-}
+ 
 
 class NotesApp extends StatelessWidget {
   const NotesApp({super.key});
@@ -12,13 +12,11 @@ class NotesApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(brightness: Brightness.dark,
-      fontFamily: 'Poppins',
-      
+      theme: ThemeData(
+        brightness: Brightness.dark,
+        fontFamily: 'Poppins',
       ),
-      
-      
-      home:const NotesViews(),
+      home: const NotesViews(),
     );
   }
 }
